@@ -1,0 +1,7 @@
+curl -v -H "content-type:application/xml" -d "<br.com.alura.loja.modelo.Carrinho><produtos><br.com.alura.loja.modelo.Produto><preco>5000.0</preco><id>10</id><nome>PS4</nome><quantidade>1</quantidade></br.com.alura.loja.modelo.Produto></produtos><rua>Rua Vergueiro 3185, 8 andar</rua><cidade>SÔÇ╣o Paulo</cidade><id>100</id></br.com.alura.loja.modelo.Carrinho>" http://localhost:8080/carrinhos
+
+http:localhost:musicapp/band/get
+
+curl -v http://localhost:8080/carrinhos/1
+
+curl -v -X "DELETE" http://localhost:8080/carrinhos/1/produtos/6237
