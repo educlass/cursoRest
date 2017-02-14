@@ -55,13 +55,23 @@ public class CarrinhoResource {
         return Response.ok().build();
     }
 	
-	@Path("{id}/produtos/{produtoId}")
+	/*@Path("{id}/produtos/{produtoId}")
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
     public Response alteraProduto(@PathParam("id") long id, @PathParam("produtoId") long produtoId, String conteudo) {
         Carrinho carrinho = new CarrinhoDAO().busca(id);
         Produto produto = (Produto) new XStream().fromXML(conteudo);
         carrinho.troca(produto);
+        return Response.ok().build();
+    }*/
+	
+	@Path("{id}/produtos/{produtoId}/quantidade")
+    @PUT
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response alteraProduto(@PathParam("id") long id, @PathParam("produtoId") long produtoId, String conteudo) {
+        Carrinho carrinho = new CarrinhoDAO().busca(id);
+        Produto produto = (Produto) new XStream().fromXML(conteudo);
+        carrinho.trocaQuantidade(produto);
         return Response.ok().build();
     }
 

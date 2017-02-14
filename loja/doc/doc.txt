@@ -5,3 +5,5 @@ http:localhost:musicapp/band/get
 curl -v http://localhost:8080/carrinhos/1
 
 curl -v -X "DELETE" http://localhost:8080/carrinhos/1/produtos/6237
+
+curl -v -X PUT -H "Content-Type: application/xml" -d "<br.com.alura.loja.modelo.Produto> <id>3467</id> <quantidade>1</quantidade>    </br.com.alura.loja.modelo.Produto>" http://localhost:8080/carrinhos/1/produtos/3467/quantidade
